@@ -33,15 +33,15 @@ def run():
     interval_interactions = 100
     training_steps = training_intervals * interval_interactions
 
-    game_settings = GameSettings(rows=5, columns=5, tetriminos=(2, 6), end_at=1000)
+    game_settings = GameSettings()
 
-    title = 'DDQN agent on the 5x5 game, trained for 10 000 interactions'
+    title = 'Convolutional DDQN + PER'
     print(title)
     plt.title(title)
 
-    agent = DQN.Agent(game_settings, training_steps, a=0.001, hidden_nodes=[250])
+    agent = DQN.Agent(game_settings, training_steps)
     interactions, scores, devs = agent.learning_curve(training_intervals, interval_interactions)
-    plt.plot(interactions, smooth(scores), label='DDQN')
+    plt.plot(interactions, smooth(scores), label='Conv. DDQN+PER')
 
     # plt.fill_between(interactions, scores - devs, scores + devs, alpha=0.3)
     plt.xlabel('Interactions')
