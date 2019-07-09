@@ -24,7 +24,7 @@ The videos below show agents playing on different sized versions of the game. As
 ![5x5](img/5x5.gif)
 
 
-## 7z7
+## 7x7
 ![7x7](img/7x7.gif)
 
 
