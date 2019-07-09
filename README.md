@@ -16,7 +16,7 @@ on the full game.
 Agents are trained from an offline experience replay buffer, implemented in replay.py. This offers both the regular and
 prioritised variants of experience replay. Prioritised replay demonstrates significantly more sample-efficient learning. 
 
-
+#
 
 The videos below show agents playing on different sized versions of the game. As the game grid gets larger the state space increases exponentially, and the time taken for training becomes the limiting factor in the agent's final performance.
 
